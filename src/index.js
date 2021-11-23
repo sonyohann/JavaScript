@@ -1,8 +1,5 @@
-const objects = [{ name: '멍멍이' }, { name: '야옹이' }];
+const names = ['멍멍이', '야옹이', '멍뭉이'];
 
-objects.push({
-  name: '고양이'
-});
-
-console.log(objects);
-console.log(objects.length);
+for (let i = 0; i < names.length; i++) {
+  console.log(names[i]);
+}
