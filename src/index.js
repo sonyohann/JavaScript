@@ -21,5 +21,5 @@ const todos = [
   }
 ];
 
-const todo = todos.find((todos) => todos.done === false);
-console.info(todo);
+const tasksNotDone = todos.filter((todos) => todos.done);
+console.log(tasksNotDone);
