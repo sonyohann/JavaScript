@@ -1,11 +1,11 @@
-function biggerThanThree(numbers) {
-  for (let i = 0; i < numbers.length; i++) {
-    if (numbers[i] <= 3) continue;
-    console.log(numbers[i]);
-  }
-}
+const superheroes = ['아이언맨', '캡틴 아메리카', '토르', '닥터 스트레인지'];
 
-const numbers = [1, 2, 3, 4, 5, 6, 7];
-console.log(biggerThanThree(numbers)); // [4, 5, 6, 7]
+superheroes.forEach((hero) => {
+  console.log(hero);
+});
 
-export default biggerThanThree;
+const dog = ['비글', '시바견', '진돗개'];
+
+dog.forEach((value) => {
+  console.log(value);
+});
