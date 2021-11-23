@@ -1,10 +1,11 @@
-let i = 0;
-let isFun = false;
+const numbers = [10, 20, 30, 40, 50];
 
-while (!isFun) {
-  console.log(i);
-  i++;
-  if (i === 30) {
-    isFun = true;
-  }
+const doggy = {
+  name: '멍멍이',
+  sound: '멍멍',
+  age: 2
+};
+
+for (let key in doggy) {
+  console.log(`${key}: ${doggy[key]}`);
 }
