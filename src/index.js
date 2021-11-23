@@ -1,12 +1,8 @@
-const alphabets = ['a', 'a', 'a', 'b', 'c', 'c', 'd', 'e'];
+function countBiggerThanTen(numbers) {
+  return numbers.filter((n) => n > 10).length;
+}
 
-const counts = alphabets.reduce((acc, current) => {
-  if (acc[current]) {
-    acc[current] += 1;
-  } else {
-    acc[current] = 1;
-  }
-  return acc;
-}, {});
+const count = countBiggerThanTen([1, 2, 3, 5, 10, 20, 30, 40, 50, 60]);
+console.log(count); // 5
 
-console.log(counts);
+export default countBiggerThanTen;
