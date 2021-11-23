@@ -1,11 +1,25 @@
-const superheroes = ['아이언맨', '캡틴 아메리카', '토르', '닥터 스트레인지'];
+const todos = [
+  {
+    id: 1,
+    text: '자바스크립트 입문',
+    done: true
+  },
+  {
+    id: 2,
+    text: '함수 배우기',
+    done: true
+  },
+  {
+    id: 3,
+    text: '객체와 배열 배우기',
+    done: true
+  },
+  {
+    id: 4,
+    text: '배열 내장함수 배우기',
+    done: false
+  }
+];
 
-superheroes.forEach((hero) => {
-  console.log(hero);
-});
-
-const dog = ['비글', '시바견', '진돗개'];
-
-dog.forEach((value) => {
-  console.log(value);
-});
+const todo = todos.find((todos) => todos.done === false);
+console.info(todo);
