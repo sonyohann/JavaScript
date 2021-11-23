@@ -1,25 +1,12 @@
-const todos = [
-  {
-    id: 1,
-    text: '자바스크립트 입문',
-    done: true
-  },
-  {
-    id: 2,
-    text: '함수 배우기',
-    done: true
-  },
-  {
-    id: 3,
-    text: '객체와 배열 배우기',
-    done: true
-  },
-  {
-    id: 4,
-    text: '배열 내장함수 배우기',
-    done: false
-  }
-];
+const numbers = [10, 20, 30, 40];
 
-const tasksNotDone = todos.filter((todos) => todos.done);
-console.log(tasksNotDone);
+const sliced = numbers.slice(0, 2);
+console.log(sliced);
+console.log(numbers);
+
+const numbers2 = [10, 20, 30, 40];
+
+const index = numbers.indexOf(30);
+const spliced = numbers2.splice(index, 1);
+console.log(spliced);
+console.log(numbers2);
