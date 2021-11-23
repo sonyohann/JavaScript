@@ -1,4 +1,9 @@
-const array = [1, 2, 3, 4, 5];
-console.log(array.join());
-console.log(array.join(' '));
-console.log(array.join(', '));
+const numbers = [1, 2, 3, 4, 5];
+
+const avg = numbers.reduce((accumulator, current, index, array) => {
+  if (index === array.length - 1) {
+    return (accumulator + current) / array.length;
+  }
+  return accumulator + current;
+}, 0);
+console.log(avg);
