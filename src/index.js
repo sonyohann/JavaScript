@@ -1,24 +1,28 @@
-class Food {
-  constructor(name) {
-    this.name = name;
-    this.brands = [];
-  }
-  addBrand(brand) {
-    this.brands.push(brand);
-  }
-  print() {
-    console.log(`${this.name}을/를 파는 음식점들`);
-    console.log(this.brands.join(', '));
-  }
-}
+const deepObject = {
+  state: {
+    information: {
+      name: 'velopert',
+      languages: ['korean', 'english', 'chinese']
+    }
+  },
+  value: 5
+};
 
-const pizza = new Food('피자');
-pizza.addBrand('피자헛');
-pizza.addBrand('도미노 피자');
+const {
+  state: {
+    information: {
+      name,
+      languages: [firstlanguage, secondlanguage]
+    }
+  },
+  value
+} = deepObject;
 
-const chicken = new Food('치킨');
-chicken.addBrand('굽네치킨');
-chicken.addBrand('BBQ');
+const extracted = {
+  name,
+  firstlanguage,
+  secondlanguage,
+  value
+};
 
-pizza.print();
-chicken.print();
+console.log(extracted);
