@@ -1,8 +1,30 @@
-function countBiggerThanTen(numbers) {
-  return numbers.filter((n) => n > 10).length;
+class Animal {
+  constructor(type, name, sound) {
+    this.type = type;
+    this.name = name;
+    this.sound = sound;
+  }
+  say() {
+    console.log(this.sound);
+  }
 }
 
-const count = countBiggerThanTen([1, 2, 3, 5, 10, 20, 30, 40, 50, 60]);
-console.log(count); // 5
+class Dog extends Animal {
+  constructor(name, sound) {
+    super('개', name, sound);
+  }
+}
 
-export default countBiggerThanTen;
+class Cat extends Animal {
+  constructor(name, sound) {
+    super('고양이', name, sound);
+  }
+}
+
+const dog = new Dog('멍멍이', '멍멍');
+const cat = new Cat('고양이', '야옹');
+const cat2 = new Cat('야오오오옹이', '야오오옹');
+
+dog.say();
+cat.say();
+cat2.say();
