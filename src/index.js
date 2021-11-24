@@ -1,28 +1,5 @@
-const deepObject = {
-  state: {
-    information: {
-      name: 'velopert',
-      languages: ['korean', 'english', 'chinese']
-    }
-  },
-  value: 5
-};
+function sum(...rest) {
+  return rest.reduce((acc, cur) => acc + cur, 0);
+}
 
-const {
-  state: {
-    information: {
-      name,
-      languages: [firstlanguage, secondlanguage]
-    }
-  },
-  value
-} = deepObject;
-
-const extracted = {
-  name,
-  firstlanguage,
-  secondlanguage,
-  value
-};
-
-console.log(extracted);
+console.log(sum(1, 2, 3, 4, 5, 6, 7, 8, 9));
